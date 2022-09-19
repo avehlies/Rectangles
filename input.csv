@@ -1,0 +1,13 @@
+aLeft, aTop, aRight, aBottom, bLeft, bTop, bRight, bBottom, description
+0, 4, 2, 0, 0, 2, 4, 0, intersection - 1 point
+0, 4, 4, 0, 2, 6, 6, 2, intersection - 2 points
+2, 4, 6, 2, 3, 5, 5, 1, intersection - 4 points
+2.5, 4.5, 6.5, 2.5, 3.5, 5.5, 5.5, 1.5, intersection - 4 points, using floats
+0, 2, 2, 0, 2, 4, 4, 2, touching corners
+0, 5, 5, 0, 5, 8, 10, 3, adjacent - partial
+0, 5, 5, 0, 5, 4, 10, 2, adjacent - sub-line
+0, 5, 5, 0, 5, 5, 10, 0, adjacent - proper
+0, 5, 5, 0, 0, 5, 5, 0, same rectangle
+0, 5, 5, 0, 1, 4, 4, 1, first contains second
+1, 4, 4, 1, 0, 5, 5, 0, second contains first
+0, 2, 2, 0, 5, 7, 7, 5, no collision
