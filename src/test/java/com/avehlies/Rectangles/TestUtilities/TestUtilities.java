@@ -25,11 +25,6 @@ public final class TestUtilities {
         assertEquals(0, expected.compareTo(actual), "The BigDecimal values are not equal.");
     }
 
-    // There isn't a Collections.multipleItemsInAList in Java1.8, and it's not worth importing Guava or Apache Commons for this
-    public static List<Point> pointList(Point... items) {
-        return Stream.of(items).collect(Collectors.toList());
-    }
-
     public static Range range(Integer min, Integer max) {
         return new Range(
                 (min == null) ? null : new BigDecimal(min),

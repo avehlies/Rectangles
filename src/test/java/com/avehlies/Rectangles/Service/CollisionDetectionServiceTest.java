@@ -82,6 +82,7 @@ public class CollisionDetectionServiceTest {
 
         BaseDetectionResult result = service.detect(a, b);
         assertTrue(result.isDetected());
-        assertEquals("adjacent. same position.", result.getMessage());
+        assertTrue(result.getMessage().contains("adjacent."));
+        assertTrue(result.getMessage().contains("same position."));
     }
 }

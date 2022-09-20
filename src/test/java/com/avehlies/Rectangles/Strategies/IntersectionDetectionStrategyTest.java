@@ -7,12 +7,12 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
 import static com.avehlies.Rectangles.TestUtilities.TestUtilities.point;
-import static com.avehlies.Rectangles.TestUtilities.TestUtilities.pointList;
 import static com.avehlies.Rectangles.TestUtilities.TestUtilities.rect;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -70,9 +70,9 @@ public class IntersectionDetectionStrategyTest {
                 Arguments.of(rect(0, 4, 4, 0), rect(0, 4, 2, 0), false, MSG_NO_INTERSECTION_SHARE_EDGE, Collections.emptyList()),
                 // intersections
                 Arguments.of(rect(0, 4, 4, 0), rect(0, 6, 2, 2), true, "There is 1 intersection. Intersections: [Point{x=2, y=4}]", Collections.singletonList(point(2, 4))),
-                Arguments.of(rect(0, 4, 4, 0), rect(0, 6, 2, -2), true, "There are 2 intersections. Intersections: [Point{x=2, y=0}, Point{x=2, y=4}]", pointList(point(2, 0), point(2, 4))),
-                Arguments.of(rect(0, 4, 4, 0), rect(-2, 6, 2, -2), true, "There are 2 intersections. Intersections: [Point{x=2, y=0}, Point{x=2, y=4}]", pointList(point(2, 0), point(2, 4))),
-                Arguments.of(rect(0, 4, 4, 0), rect(1, 6, 3, -2), true, "There are 4 intersections. Intersections: [Point{x=1, y=0}, Point{x=1, y=4}, Point{x=3, y=0}, Point{x=3, y=4}]", pointList(point(1, 0), point(1, 4), point(3, 0), point(3, 4)))
+                Arguments.of(rect(0, 4, 4, 0), rect(0, 6, 2, -2), true, "There are 2 intersections. Intersections: [Point{x=2, y=0}, Point{x=2, y=4}]", Arrays.asList(point(2, 0), point(2, 4))),
+                Arguments.of(rect(0, 4, 4, 0), rect(-2, 6, 2, -2), true, "There are 2 intersections. Intersections: [Point{x=2, y=0}, Point{x=2, y=4}]", Arrays.asList(point(2, 0), point(2, 4))),
+                Arguments.of(rect(0, 4, 4, 0), rect(1, 6, 3, -2), true, "There are 4 intersections. Intersections: [Point{x=1, y=0}, Point{x=1, y=4}, Point{x=3, y=0}, Point{x=3, y=4}]", Arrays.asList(point(1, 0), point(1, 4), point(3, 0), point(3, 4)))
         );
     }
 
