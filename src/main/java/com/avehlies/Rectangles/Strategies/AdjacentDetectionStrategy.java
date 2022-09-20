@@ -24,6 +24,7 @@ public class AdjacentDetectionStrategy implements CollisionDetectionStrategy {
             );
         }
 
+        // treat this as 2 1-dimensional problems
         Range xIntersectionRange = RangeUtility.getIntersectedRange(a.getXRange(), b.getXRange());
         Range yIntersectionRange = RangeUtility.getIntersectedRange(a.getYRange(), b.getYRange());
 

@@ -14,10 +14,10 @@ import static com.avehlies.Rectangles.TestUtilities.TestUtilities.rect;
 import static org.mockito.Mockito.*;
 
 public class ApplicationServiceTest {
-    private CollisionDetectionService collisionDetectionServiceMock = mock(CollisionDetectionService.class);
-    private DataLoaderService dataLoaderServiceMock = mock(DataLoaderService.class);
+    private final CollisionDetectionService collisionDetectionServiceMock = mock(CollisionDetectionService.class);
+    private final DataLoaderService dataLoaderServiceMock = mock(DataLoaderService.class);
 
-    private ApplicationService service = new ApplicationService(
+    private final ApplicationService service = new ApplicationService(
             collisionDetectionServiceMock,
             dataLoaderServiceMock
     );

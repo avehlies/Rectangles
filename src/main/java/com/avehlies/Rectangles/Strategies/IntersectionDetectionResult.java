@@ -6,6 +6,10 @@ import com.avehlies.Rectangles.Entities.Point;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Result returned from an {@link IntersectionDetectionStrategy} to include a
+ * {@link List} of {@link Point}s of intersection
+ */
 public class IntersectionDetectionResult extends BaseDetectionResult {
     private final List<Point> intersections;
 

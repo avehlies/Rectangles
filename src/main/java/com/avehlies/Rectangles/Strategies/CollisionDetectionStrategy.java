@@ -9,12 +9,12 @@ public interface CollisionDetectionStrategy {
 
     /**
      * Returns the {@link CollisionType} handled by this strategy
-     * @return a {@code RectangleCollisionType}
+     * @return a {@code CollisionType}
      */
     CollisionType getType();
 
     /**
-     * Detects whether the {@link Rectangle} objects collide for the {@code RectangleCollisionType}
+     * Detects whether the {@link Rectangle} objects collide for the {@code CollisionType}
      * @param a the first {@code Rectangle}
      * @param b the second {@code Rectangle}
      * @return a {@link BaseDetectionResult} or derivative class

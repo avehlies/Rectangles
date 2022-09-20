@@ -20,8 +20,9 @@ public class CollisionDetectionService {
     public CollisionDetectionService(
         List<CollisionDetectionStrategy> collisionDetectionStrategyList
     ) {
-        // While this may be extreme for this assignment, in a full-fledged Spring application, this is likely
-        // how we would want to inject our strategies so as we add more, they're autowired without any more intervention
+        // In a full-fledged Spring application, this is likely
+        // how we would want to inject our strategies so as we add more,
+        // they're autowired without any more intervention
         detectionStrategies = collisionDetectionStrategyList.stream()
                 .collect(Collectors.toMap(CollisionDetectionStrategy::getType, Function.identity()));
     }
@@ -63,7 +64,7 @@ public class CollisionDetectionService {
      * Detects if two {@link Rectangle}s collide based on a specific {@link CollisionType}. Maybe we're
      * only interested if it's one situation instead of just "Give me any collision that there is"
      *
-     * @param type the {@code RectangleCollisionType} to check
+     * @param type the {@code CollisionType} to check
      * @param a the first {@code Rectangle}
      * @param b the second {@code Rectangle}
      * @return a {@link BaseDetectionResult}

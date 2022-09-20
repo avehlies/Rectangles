@@ -17,11 +17,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class DataLoaderServiceTest {
 
-    private final BigDecimal FIVE = new BigDecimal(5);
+    private static final BigDecimal FIVE = new BigDecimal(5);
 
-    private CsvReader csvReaderMock = mock(CsvReader.class);
+    private final CsvReader csvReaderMock = mock(CsvReader.class);
 
-    private DataLoaderService service = new DataLoaderService(csvReaderMock);
+    private final DataLoaderService service = new DataLoaderService(csvReaderMock);
 
     @Test
     public void testFileNotFound() throws FileNotFoundException {

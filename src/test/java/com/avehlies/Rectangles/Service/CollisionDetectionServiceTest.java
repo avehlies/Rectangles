@@ -17,10 +17,10 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class CollisionDetectionServiceTest {
-    private SamePositionDetectionStrategy samePositionStrategy = mock(SamePositionDetectionStrategy.class);
-    private ContainmentDetectionStrategy containmentStrategy = mock(ContainmentDetectionStrategy.class);
-    private AdjacentDetectionStrategy adjacentStrategy = mock(AdjacentDetectionStrategy.class);
-    private IntersectionDetectionStrategy intersectionStrategy = mock(IntersectionDetectionStrategy.class);
+    private final SamePositionDetectionStrategy samePositionStrategy = mock(SamePositionDetectionStrategy.class);
+    private final ContainmentDetectionStrategy containmentStrategy = mock(ContainmentDetectionStrategy.class);
+    private final AdjacentDetectionStrategy adjacentStrategy = mock(AdjacentDetectionStrategy.class);
+    private final IntersectionDetectionStrategy intersectionStrategy = mock(IntersectionDetectionStrategy.class);
 
     private CollisionDetectionService service;
 

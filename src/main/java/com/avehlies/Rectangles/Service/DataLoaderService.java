@@ -21,7 +21,7 @@ public class DataLoaderService {
 
     /**
      * 1. Loads a CSV file in the format:
-     *        aLeft, aTop, aRight, aBottom, bLeft, bTop, bRight, bBottom
+     *        aLeft, aTop, aRight, aBottom, bLeft, bTop, bRight, bBottom, comments (ignored)
      * 2. Removes the header
      * 3. Turns the values into {@link BigDecimal}s
      * 4. Creates two {@link Rectangle}s from the values

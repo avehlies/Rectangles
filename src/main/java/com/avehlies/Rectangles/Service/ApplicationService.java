@@ -26,7 +26,7 @@ public class ApplicationService {
     }
 
     /**
-     * The main application method. This is our pseudo-equivalent of SpringApplication.run
+     * The main application method. This is what SpringApplication.run() would call
      * @param args the application arguments
      */
     public void run(String[] args) {
@@ -44,6 +44,7 @@ public class ApplicationService {
 
     /**
      * Detect collisions for {@link List}s of {@link Pair}s of {@link Rectangle}s
+     * and display the output
      * @param rectangleList {@code List} of {@code Pair}s of {@code Rectangle}s
      */
     public void detectCollisions(List<Pair<Rectangle>> rectangleList) {
